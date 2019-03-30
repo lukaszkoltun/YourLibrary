@@ -5,7 +5,7 @@ import {App} from './Components/App.jsx';
 
 document.addEventListener('DOMContentLoaded', () =>{
     ReactDOM.render(
-      <App/>,
+       <App/>,
       document.getElementById('app')
     );
 });
