@@ -13,7 +13,7 @@ export const Start = () =>(
                     discription - is optional you can write there what you want.</p>
                 <p>You can mark 'already ready' if you read this book.
                     If you want to see all your books go to "List" tab where you have the list of  yours book.</p></Col>
-            <Col><img style={{width: '22em', height: '25em'}} src="../../img/piono.jpg" alt="Imagine lots of books"/></Col>
+            <Col></Col>
         </Row>
 
     </Container>
