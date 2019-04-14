@@ -64,7 +64,7 @@ export class AddBook extends React.Component{
             title: `${this.state.title.value}`,
             type: `${this.state.type.value}`,
             description: `${this.state.description.value}`,
-            read: `${this.state.readCheck.value}`
+            read: this.state.readCheck.value
         };
 
         console.log(obj);
@@ -80,39 +80,8 @@ export class AddBook extends React.Component{
             .then(res => {
                 console.log("Dodałem książkę:");
                 console.log(res);
+                this.props.history.push('/list')
             });
-        this.setState({
-            author: {
-                type: 'text',
-                name: 'author',
-                placeholder: 'Enter author...',
-                value: ''
-            },
-            title: {
-                type: 'text',
-                name: 'title',
-                placeholder: 'Enter title...',
-                value: ''
-            },
-            type: {
-                as: 'select',
-                name: 'type'
-            },
-            description: {
-                as: 'textarea',
-                name: 'description',
-                placeholder: 'Something about...',
-                value: ''
-            },
-            readCheck: {
-                type: 'checkbox',
-                label: 'Already read?',
-                name: 'read',
-                checked: true,
-                value: true
-
-            }
-        })
     };
 
 

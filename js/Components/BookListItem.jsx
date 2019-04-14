@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Elem = styled.li`
     padding: 1em 0 0 2em;
+    margin-bottom: 0.5em;
     list-style-type: none;
     background: lightgrey;
     color: black;
@@ -14,9 +15,10 @@ const Elem = styled.li`
         font-size: 0.8em;
         color: grey;
     }
+    span{
+        color: #ff8000;
+    }
 `;
-
-
 
 export class BookListItem extends React.Component{
     constructor(props){
@@ -38,12 +40,11 @@ export class BookListItem extends React.Component{
     };
     render(){
         return <Elem>
-            <div> {this.props.book.author}</div>
-            <div> {this.props.book.title} </div>
+            <div style={{fontWeight: '100'}}> {this.props.book.author}</div>
+            <div> {this.props.book.title}</div>
             <div style={this.state.style}>
-                <div> {this.props.book.type}</div>
-                <div> {this.props.book.description}</div>
-
+                <div><span>Genre:</span>  {this.props.book.type}</div>
+                <div> <span>Description: </span>{this.props.book.description}</div>
             </div>
             <p onClick={this.showMore}>{this.state.text}</p>
         </Elem>

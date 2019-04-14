@@ -17,20 +17,20 @@
       "id": 2
     },
     {
-      "author": "aaa",
-      "title": "aaa",
-      "type": "Sci-Fi",
-      "description": "aaa",
+      "author": "J.R.R. Tolkien",
+      "title": "The Lord of The Rings",
+      "type": "Fantasy",
+      "description": "A fellowship of hobbits, elves, dwarfs, and men is formed to destroy the ring by casting it into the volcanic fires of the Crack of Doom, where it was forged. They are opposed on their harrowing mission by the evil Sauron and his Black Riders.",
       "read": "true",
-      "id": 3
+      "id": 5
     },
     {
-      "author": "aa",
-      "title": "aa",
-      "type": "Sci-Fi",
-      "description": "aaf",
-      "read": "true",
-      "id": 4
+      "author": "jan kowalski",
+      "title": "tytul jakis",
+      "type": "Historical",
+      "description": "opis",
+      "read": true,
+      "id": 6
     }
   ]
 }

@@ -15,6 +15,11 @@ export class BookList extends React.Component{
             .then(res => res.json())
             .then(json => this.setState({ list: json }));
     }
+
+    componentWillUnmount() {
+        this.setState({ list : []})
+    }
+
     render(){
         return <ListGroup>
             {this.state.list.map(element => <BookListItem key={element.id} book={element}/> )}
