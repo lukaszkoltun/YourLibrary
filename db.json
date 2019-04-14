@@ -1,0 +1,36 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Little Prince",
+      "author": "Antoine De Saint-Exupery",
+      "type": "fantasy",
+      "description": "One of the two protagonists of the story. After leaving his home planet and his beloved rose, the prince journeys around the universe, ending up on Earth. Frequently perplexed by the behavior of grown-ups, the prince symbolizes the hope, love, innocence, and insight of childhood that lie dormant in all of us. Though the prince is sociable and meets a number of characters as he travels, he never stops loving and missing the rose on his home planet.",
+      "read": true
+    },
+    {
+      "author": "Stephen King",
+      "title": "The Shining",
+      "type": "Horror",
+      "description": "The Shining centers on the life of Jack Torrance, an aspiring writer and recovering alcoholic who accepts a position as the off-season caretaker of the historic Overlook Hotel in the Colorado Rockies. His family accompanies him on this job, including his young son Danny Torrance, who possesses \"the shining\", an array of psychic abilities that allow Danny to see the hotel's horrific past. Soon, after a winter storm leaves them snowbound, the supernatural forces inhabiting the hotel influence Jack's sanity, leaving his wife and son in incredible danger.",
+      "read": "true",
+      "id": 2
+    },
+    {
+      "author": "aaa",
+      "title": "aaa",
+      "type": "Sci-Fi",
+      "description": "aaa",
+      "read": "true",
+      "id": 3
+    },
+    {
+      "author": "aa",
+      "title": "aa",
+      "type": "Sci-Fi",
+      "description": "aaf",
+      "read": "true",
+      "id": 4
+    }
+  ]
+}

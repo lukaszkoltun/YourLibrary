@@ -1,14 +1,7 @@
 import React from 'react';
 import Form, {Control, Label, Group, Check} from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import styled from 'styled-components'
 
-const AddForm = styled.div`
-   background: lightblue;
-   border: 2px solid blue;
-   border-radius: 1%;
-   color: navy;
-`
 
 export class AddBook extends React.Component{
     constructor(props){
@@ -54,25 +47,77 @@ export class AddBook extends React.Component{
              checked
          })
      })
-    }
+    };
 
     onChange = (name, value) => {
-        const input = Object.assign(this.state[name])
+        const input = Object.assign(this.state[name]);
         input.value = value;
 
         this.setState({
             [name]: input
         });
-        console.log(value);
-    }
+    };
     onSubmit = (e) =>{
         e.preventDefault();
-        console.log(this.state)
-    }
+        const obj = {
+            author: `${ this.state.author.value}`,
+            title: `${this.state.title.value}`,
+            type: `${this.state.type.value}`,
+            description: `${this.state.description.value}`,
+            read: `${this.state.readCheck.value}`
+        };
+
+        console.log(obj);
+
+        fetch('http://localhost:3000/books', {
+            method: 'POST',
+            body: JSON.stringify( obj ),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log("Dodałem książkę:");
+                console.log(res);
+            });
+        this.setState({
+            author: {
+                type: 'text',
+                name: 'author',
+                placeholder: 'Enter author...',
+                value: ''
+            },
+            title: {
+                type: 'text',
+                name: 'title',
+                placeholder: 'Enter title...',
+                value: ''
+            },
+            type: {
+                as: 'select',
+                name: 'type'
+            },
+            description: {
+                as: 'textarea',
+                name: 'description',
+                placeholder: 'Something about...',
+                value: ''
+            },
+            readCheck: {
+                type: 'checkbox',
+                label: 'Already read?',
+                name: 'read',
+                checked: true,
+                value: true
+
+            }
+        })
+    };
 
 
     render(){
-        return <AddForm>
+        return <div>
             <Form onSubmit  = {this.onSubmit}>
                 <Group>
 
@@ -125,6 +170,6 @@ export class AddBook extends React.Component{
                 </Group>
                 <Button type='submit' >Submit</Button>
             </Form>
-        </AddForm>
+        </div>
     }
 }
